@@ -3,6 +3,7 @@
 PyQt5 based simple **.png** to **.ico** converter.
 
 ## Installation
+- Install Python
 - Install requirements
   - **Manually install**  
 
