@@ -1,3 +1,8 @@
+# -----------------------------------------------------------------------------
+# Copyright (c) 2022, DARKSOUL
+# Distributed under the GNU General Public License v3.0
+# -----------------------------------------------------------------------------
+
 import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QMessageBox
@@ -9,14 +14,9 @@ SAVE_PATH= "C:/Users/"+user_name+"/Pictures/Png to Ico/"
 
 if not os.path.exists(SAVE_PATH):
     try:
-        # print(" > Creating folder!")
         os.mkdir(SAVE_PATH)
-        # print(" > Folder created!")
     except:
-        # print(" > Failed to create folder!")
         pass
-
-# print("\n")
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -69,16 +69,11 @@ class Ui_MainWindow(object):
         raw_name= os.path.basename(image_path)
         global image_name
         image_name= str(SAVE_PATH+raw_name+".ico")
-        
-        # print(" > Image path: " +image_path)
-        # print(" > Image name: " +raw_name)
 
     def convert(self):
         try:
-            # print(" > Converting image!")
             img= Image.open(image_path)
             img.save(image_name)
-            # print(" > Converted!")
 
             success_msg= QMessageBox()
             success_msg.setText("Image convert successfully!")
@@ -86,7 +81,6 @@ class Ui_MainWindow(object):
             success_msg.setStandardButtons(QMessageBox.Ok)
             success_msg.exec_()
         except:
-            # print(" > Failed to convert image!")
             error_msg= QMessageBox()
             error_msg.setText("Image convert Failed!")
             error_msg.setWindowTitle("Failed!")
