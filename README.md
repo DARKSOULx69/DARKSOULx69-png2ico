@@ -19,7 +19,7 @@ PyQt5 based simple **.png** to **.ico** converter.
 
 Open cmd  
 Browse png2ico folder
-Type **"Python main.py"**  
+Type **"python main.py"** & **ENTER**  
 or run **"run.bat"**
 
 #
